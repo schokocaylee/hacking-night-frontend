@@ -1,6 +1,7 @@
 import { FrameHexagon, Table } from "@arwes/core"
 import { useQuery } from "react-query"
 import { useAutoScroll } from "./useAutoScroll"
+import "./Leaderboard.css"
 
 export interface Challenge {
   id: number

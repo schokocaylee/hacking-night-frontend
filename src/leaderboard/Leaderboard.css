@@ -1,0 +1,10 @@
+
+.arwes-table {
+  overflow: unset;
+}
+.arwes-table__row--header {
+  position: sticky;
+  top: 0;
+  background-color: #021114;
+  z-index: 99999;
+}
