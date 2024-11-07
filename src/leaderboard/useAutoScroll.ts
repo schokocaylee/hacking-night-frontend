@@ -13,13 +13,7 @@ export function useAutoScroll() {
     if (!active) {
       return
     }
-    const max = Math.max(
-      document.body.scrollHeight,
-      document.body.offsetHeight,
-      document.documentElement.clientHeight,
-      document.documentElement.scrollHeight,
-      document.documentElement.offsetHeight
-    )
+    const max = document.documentElement.scrollHeight - document.documentElement.clientHeight
     let curr = 0
     let dir = 1
     const interval = setInterval(() => {
@@ -29,7 +23,7 @@ export function useAutoScroll() {
         dir = 1
       }
       window.scrollTo({ top: curr, behavior: "smooth" })
-      curr += dir * 1
+      curr += dir * 20
     }, 100)
     return () => {
       console.log("CLEAR INTERVAL")
